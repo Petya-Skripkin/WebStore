@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "node scripts/start.js && npm run test",
     "build": "node scripts/build.js",
+    "test": "jest -o --runInBand --env=jsdom --colors --verbose",
+    "test:all": "jest --runInBand --env=jsdom --colors --verbose",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006"
   },
