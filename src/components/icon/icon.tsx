@@ -2,8 +2,11 @@ import React from "react";
 
 import { Svg } from "./styles";
 
-export type iconName =
-  | "close";
+export type iconName = 
+  | "close"
+  | "plus"
+  | "minus"
+  | "question";
 
 interface IProps {
   iconName: iconName;
