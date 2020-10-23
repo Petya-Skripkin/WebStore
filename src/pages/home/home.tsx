@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Basket, Modal } from 'components/.';
+import { Basket, Modal } from '../../components';
 
 const Home = () => {
 
@@ -16,7 +16,7 @@ const Home = () => {
         title="Рубашка"
         day="2 дня"
         price="2 500 тг"
-        count={count}
+        count={count} 
         onPlus={() => setCount(count + 1)}
         onMinus={() => setCount(count > 0 ? count - 1 : count)}
         onOpenModalWindow={() => setOpen(!open)}

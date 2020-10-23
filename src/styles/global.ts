@@ -1,7 +1,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { colors } from "constants/.";
+import { colors } from "../constants";
 
 import { createGlobalStyle } from "styled-components";
 

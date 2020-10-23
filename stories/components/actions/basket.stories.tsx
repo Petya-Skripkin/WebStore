@@ -6,6 +6,8 @@ import { storiesOf } from '@storybook/react';
 import Basket from '../../../src/components/basket';
 import Modal from '../../../src/components/modal';
 
+const image = '../../public/shirt.png';
+
 const BasketDemo = () => {
   const [count, setCount] = React.useState(0);
   const [open, setOpen] = React.useState(false);
@@ -15,7 +17,7 @@ const BasketDemo = () => {
     <>
       <Basket
         close={close}
-        img="./shirt.png"
+        img= {image}
         title="Рубашка"
         day="2 дня"
         price="2 500 тг"

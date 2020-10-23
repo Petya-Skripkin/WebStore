@@ -4,3 +4,4 @@ export { default as Button } from './button';
 export { default as OfficeWear } from './office-wear';
 export { default as OuterWear } from './outer-wear';
 export { default as Basket } from './basket';
+export { default as Total } from './total';
