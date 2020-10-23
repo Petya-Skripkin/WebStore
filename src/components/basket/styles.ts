@@ -40,7 +40,7 @@ export const RightButton = styled.button`
 `;
 
 export const BIcon = styled(Icon)`
-  height: 15px;
+  height: 25px;
   padding: 8px 7px;
   color: ${colors.grey};
   fill: transparent;
