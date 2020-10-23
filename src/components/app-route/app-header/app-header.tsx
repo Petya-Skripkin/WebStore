@@ -1,15 +1,11 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
-import _get from "lodash/get";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import _get from 'lodash/get';
 
-import { urls } from "../../../constants";
+import { urls } from '../../../constants';
+import Search from '../../search';
 
-import {
-  MainContainer,
-  Menu,
-  Item,
-  MenuLink,
-} from "./styles";
+import { MainContainer, Menu, Item, MenuLink, Logo, FlexContent, Button, Login } from './styles';
 
 export interface IMenu {
   link: string;
@@ -42,6 +38,14 @@ const AppHeader = ({ menuItems }: IHeader) => {
           </Item>
         )}
       </Menu>
+      <Logo src="./recents.png" alt="" />
+      <FlexContent>
+      <Search onChange={() => 0} />
+      <Button>
+        Войти
+        <Login iconName="login" />
+      </Button>
+      </FlexContent>
     </MainContainer>
   );
 };
