@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs/><symbol id="close" viewBox="0 0 15 17">
 <path d="M13.0002 14.8743L2.00049 1.88629" stroke="#B0B3BC" stroke-width="2.5" stroke-linecap="round"/>
 <path d="M1.99978 14.8747L12.9995 1.88665" stroke="#B0B3BC" stroke-width="2.5" stroke-linecap="round"/>
+</symbol><symbol id="login" viewBox="0 0 24 24">
+<path d="M18 21.6C16.9322 19.4755 14.5819 18 11.8543 18C9.35273 18 7.16858 19.2411 6 21.0857" stroke="#172853" stroke-width="2"/>
+<circle cx="12" cy="12" r="11" stroke="#172853" stroke-width="2"/>
+<circle cx="12" cy="10.8" r="3.8" stroke="#172853" stroke-width="2"/>
 </symbol><symbol id="minus" viewBox="0 0 32 32">
 <circle cx="15.8824" cy="15.6471" r="14.6471" stroke="#172853" stroke-width="2"/>
 <path d="M22.402 15.647H9.36279" stroke="#172853" stroke-width="2" stroke-linecap="round"/>
