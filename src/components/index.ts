@@ -6,3 +6,4 @@ export { default as OuterWear } from './outer-wear';
 export { default as Basket } from './basket';
 export { default as Total } from './total';
 export { default as Search } from './search';
+export { default as ModalBox } from './modal-box';

@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { Basket, Modal, Search } from '../../components';
+import { BrowserRouter } from "react-router-dom";
+import { Basket, Modal, Search, ModalBox } from '../../components';
 
 const Home = () => {
 
@@ -10,13 +10,26 @@ const Home = () => {
 
   return (
     <>
+      <BrowserRouter>
+        <ModalBox path="/modal"
+          parentPath="/"
+          Component={
+            <p>
+              <h1>Рубашка</h1>
+              <div>А вот так это делается просто берешь и делаешь
+              и делать можно много а можно вообще не делать или делать и делать или не делать и не делать или делать но не сильно
+            </div>
+            </p>
+          }
+        />
+      </BrowserRouter>
       <Basket
         close={close}
         img="./shirt.png"
         title="Рубашка"
         day="2 дня"
         price="2 500 тг"
-        count={count} 
+        count={count}
         onPlus={() => setCount(count + 1)}
         onMinus={() => setCount(count > 0 ? count - 1 : count)}
         onOpenModalWindow={() => setOpen(!open)}
@@ -33,8 +46,8 @@ const Home = () => {
           </>
         }
       />
-      <Search 
-        onChange= {() => console.log('gg')}
+      <Search
+        onChange={() => console.log('gg')}
       />
     </>
   )
