@@ -5,3 +5,4 @@ export { default as OfficeWear } from './office-wear';
 export { default as OuterWear } from './outer-wear';
 export { default as Basket } from './basket';
 export { default as Total } from './total';
+export { default as Search } from './search';

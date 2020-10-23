@@ -6,7 +6,8 @@ export type iconName =
   | "close"
   | "plus"
   | "minus"
-  | "question";
+  | "question"
+  | "search";
 
 interface IProps {
   iconName: iconName;
