@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from "react-router-dom";
-import { Basket, Modal, Search, ModalBox } from '../../components';
+import { Basket, Modal, Search, ModalBox, Footer } from '../../components';
 
 const Home = () => {
 
@@ -48,6 +48,24 @@ const Home = () => {
       />
       <Search
         onChange={() => console.log('gg')}
+      />
+      <Footer 
+        logo= "./recents.png"
+        sotialNetwork= {[
+          {
+            link: "#",
+            iconName: "./WhatsApp.png"
+          },
+          {
+            link: "#",
+            iconName: "./Facebook.png"
+          },
+          {
+            link: "#",
+            iconName: "./YouTube.png"
+          }
+        ]}
+        num= "+7 (708) 380 - 70 - 09"
       />
     </>
   )

@@ -4,7 +4,7 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import { AppRoute } from 'components/.'
 import { urls } from 'constants/.';
 import { CUSTOMER_MENU } from './mock';
-// import { Home } from './pages';
+import { Home } from './pages';
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
           />
         </Switch>
       </BrowserRouter>
-      {/* <Home /> */}
+      <Home />
     </>
   );
 };
