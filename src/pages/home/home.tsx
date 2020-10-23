@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Basket, Modal } from '../../components';
+import { Basket, Modal, Search } from '../../components';
 
 const Home = () => {
 
@@ -32,6 +32,9 @@ const Home = () => {
 и делать можно много а можно вообще не делать или делать и делать или не делать и не делать или делать но не сильно</div>
           </>
         }
+      />
+      <Search 
+        onChange= {() => console.log('gg')}
       />
     </>
   )
