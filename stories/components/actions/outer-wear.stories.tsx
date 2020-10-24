@@ -37,7 +37,7 @@ const OuterWearDemo = () => {
   )
 }
 
-storiesOf("Components/OuterWear", module).add(
+storiesOf("Components/actions", module).add(
   "OuterWear",
   () => (
     <div>

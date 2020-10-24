@@ -19,7 +19,7 @@ const Home = ({ history }) => {
     load();
   }, [setCategories]);
 
-  console.log(categories);
+  
   return (
     <>
       <TitleLink>Главная</TitleLink>

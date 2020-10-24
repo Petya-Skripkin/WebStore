@@ -42,7 +42,7 @@ const BasketDemo = () => {
   )
 }
 
-storiesOf("Components/Basket", module).add(
+storiesOf("Components/actions", module).add(
   "Basket",
   () => (
     <div>

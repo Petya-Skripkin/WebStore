@@ -19,7 +19,7 @@ const Product = ({ match }) => {
     };
 
     load();
-  }, [setProducts]);
+  }, []);
 
   return (
     <>

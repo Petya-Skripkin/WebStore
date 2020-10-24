@@ -24,7 +24,7 @@ const OuterWear = ({ picture, name, duration, price, onOpenModalWindow }: IProps
         <Delivery>{duration / 86400}</Delivery>
         <p>{price}</p>
         <Count>
-          <Button onClick={() => setCount(count)}><Plus iconName="plus" /></Button>
+          <Button onClick={() => setCount(count + 1)}><Plus iconName="plus" /></Button>
           <Num>{count}</Num>
           <Button onClick={() => setCount(count > 0 ? count - 1 : count)}><Minus iconName="minus" /></Button>
         </Count>

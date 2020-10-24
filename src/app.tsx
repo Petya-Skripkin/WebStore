@@ -1,24 +1,41 @@
 import React from 'react';
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch } from 'react-router-dom';
 
-import { AppRoute, Footer } from 'components/.'
+import { AppRoute, ModalBox, Footer } from 'components/.';
 import { urls } from 'constants/.';
 import { CUSTOMER_MENU } from './mock';
-import { Home, Product } from './pages';
-
+import { Home, Login, Product } from './pages';
+import { loadUser } from './api';
+ 
 const App = () => {
+
+  const [user, setUser] = React.useState('');
+
+  React.useEffect(() => {
+    const load = async () => {
+      const user = await loadUser();
+      setUser(user[0].username);
+    };
+
+    load();
+  }, []);
+
   return (
     <>
       <BrowserRouter>
         <Switch>
+          <ModalBox 
+            path={urls.LOGIN}
+            Component={<Login />}
+          />
           <AppRoute
-            name="Some name"
+            name={user}
             menuItems={CUSTOMER_MENU}
             path={`${urls.CATEGORIES}/:categoryId`}
             component={Product}
           />
           <AppRoute
-            name="Some name"
+            name={user}
             menuItems={CUSTOMER_MENU}
             path={urls.HOME}
             component={Home}
