@@ -36,6 +36,10 @@ export const MenuLink = styled(Link)<{ isActive: boolean }>`
 `;
 
 export const Logo = styled.img`
+  position: absolute;
+  top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   height: 30px;
 `;
 
