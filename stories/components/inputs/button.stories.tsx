@@ -11,7 +11,7 @@ const ButtonDemo = () => {
   )
 }
 
-storiesOf("Components/Button", module).add(
+storiesOf("Components/Inputs", module).add(
   "Button",
   () => (
     <div>

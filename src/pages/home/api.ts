@@ -7,7 +7,7 @@ export const loadCategories = async () => {
   const { data }= await axios.get(`${API_URL}/products`,
     {
       headers: {
-      'Authorization': 'Bearer ' + authHelpers.getToken()
+      'Authorization': 'Bearer ' + authHelpers.getAccessToken()
     }
   });
 

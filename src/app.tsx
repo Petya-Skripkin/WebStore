@@ -1,21 +1,25 @@
 import React from 'react';
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch } from 'react-router-dom';
 
-import { AppRoute, Footer } from 'components/.'
+import { AppRoute, ModalBox, Footer } from 'components/.';
 import { urls } from 'constants/.';
 import { CUSTOMER_MENU } from './mock';
-import { Home } from './pages';
+import { Login, Home } from 'pages/.';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Switch>
+          <ModalBox 
+            path={urls.LOGIN}
+            Component={<Login />}
+          />
           <AppRoute
             name="Some name"
             menuItems={CUSTOMER_MENU}
             path={urls.HOME}
-            component={() => <Home />}
+            component={Home}
           />
         </Switch>
       </BrowserRouter>

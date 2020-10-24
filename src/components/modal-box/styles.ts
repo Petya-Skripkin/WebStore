@@ -21,6 +21,7 @@ export const Content = styled.div<{ withoutPadding?: boolean }>`
   min-width: 400px;
   min-height: 300px;
   width: max-content;
+  padding: 30px;
 
   ${({ withoutPadding }) =>
   withoutPadding && css`
