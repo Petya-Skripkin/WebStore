@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch } from "react-router-dom";
 
-import { AppRoute } from 'components/.'
+import { AppRoute, Footer } from 'components/.'
 import { urls } from 'constants/.';
 import { CUSTOMER_MENU } from './mock';
 import { Home } from './pages';
@@ -15,11 +15,23 @@ const App = () => {
             name="Some name"
             menuItems={CUSTOMER_MENU}
             path={urls.HOME}
-            component={() => <></>}
+            component={() => <Home />}
           />
         </Switch>
       </BrowserRouter>
-      <Home />
+
+      <Footer
+        logo="./recents.png"
+        sotialNetwork={[
+          {
+            link: "#",
+            iconName: "./WhatsApp.png"
+          }
+        ]}
+        num="+7 (708) 380 - 70 - 09"
+      />
+      {/* /categories
+      /categories/wear */}
     </>
   );
 };

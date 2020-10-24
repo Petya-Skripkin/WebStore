@@ -9,7 +9,8 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 220px;
+  width: 280px;
+  height: 420px;
   border-radius: 8px;
 `;
 
@@ -20,12 +21,12 @@ export const Title = styled.h2`
 
 export const Conteiner = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `;
 
-export const Link = styled.a`
+export const Text = styled.p`
   color: ${colors.grey};
-  text-decoration: none;
 
   &:hover {
     color: ${colors.lightblack};

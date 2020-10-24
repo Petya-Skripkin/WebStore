@@ -1,30 +1,26 @@
 import React from 'react';
 
-import { Content, Image, Title, Conteiner, Link, Button } from './styles';
+import { Content, Image, Title, Conteiner, Text } from './styles';
 
 interface IMenu {
-  link: string;
   title: string;
+  description: string;
 }
 
 interface IProps {
-  image: string;
-  title: string;
-  menu: IMenu[];
-  onClick: () => void;
+  picture: string;
+  name: string;
+  hint: IMenu;
 }
 
-const OfficeWear = ({ image, title, menu, onClick }: IProps) => {
+const OfficeWear = ({ picture, name, hint }: IProps) => {
   return (
     <Content>
-      <Image src={image} alt="" />
-      <Title>{title}</Title>
+      <Image src={picture} alt="" />
+      <Title>{name}</Title>
       <Conteiner>
-        {menu.map(item => (
-          <Link href={item.link}>{item.title}</Link>
-        ))
-        }
-        <Button onClick={onClick}>...</Button>
+        <Text>{hint.title}</Text>
+        <Text>{hint.description}</Text>
       </Conteiner>
     </Content>
   )
