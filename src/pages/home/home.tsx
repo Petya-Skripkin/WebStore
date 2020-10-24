@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Basket, Modal, Search, ModalBox, Footer } from '../../components';
 
 const Home = () => {
-
   const [count, setCount] = React.useState(0);
   const [open, setOpen] = React.useState(false);
   const [close, setClose] = React.useState(false);

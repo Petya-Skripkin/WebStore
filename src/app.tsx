@@ -12,15 +12,14 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <ModalBox 
-            path= {urls.LOGIN}
-            parentPath= {urls.HOME}
-            Component={<Login history= {urls.HOME} />}
+            path={urls.LOGIN}
+            Component={<Login />}
           />
           <AppRoute
             name="Some name"
             menuItems={CUSTOMER_MENU}
             path={urls.HOME}
-            component={() => <Home />}
+            component={Home}
           />
         </Switch>
       </BrowserRouter>

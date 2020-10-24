@@ -22,13 +22,12 @@ const authHelper = {
   },
   async verifyToken() {
     const token = this.getAccessToken();
-    const { data } = await axios.post(`${API_URL}token/verify`, { token });
-
+    const { data } = await axios.post(`${API_URL}token/verify/`, { token });
     return data.code !== ERROR_VERIFIED_CODE;
   },
   async refreshToken() {
     const token = this.getRefreshToken();
-    const { data } = await axios.post(`${API_URL}token/refresh`, { token });
+    const { data } = await axios.post(`${API_URL}token/refresh/`, { token });
 
     if(data.code === ERROR_VERIFIED_CODE) {
       return false;
@@ -52,12 +51,12 @@ const authHelper = {
       return false;
     }
 
-    const isVerified = this.verifyToken();
+    const isVerified = await this.verifyToken();
     if (isVerified) {
       return true;
     }
 
-    const isRefreshed = this.refreshToken();
+    const isRefreshed = await this.refreshToken();
     if (isRefreshed) {
       return true;
     }

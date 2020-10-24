@@ -29,12 +29,13 @@ const AppRoute = ({
       if(!res) {
         authHelpers.signout();
       }
-      setLoad(false);
+      
       setIsAuthenticated(res);
+      setLoad(false);
     }
 
     auth();
-  }, [setLoad, setIsAuthenticated])
+  }, [])
 
   if(load) {
     return <span>Loading...</span>;
@@ -44,14 +45,16 @@ const AppRoute = ({
     return <Redirect to={{ pathname: urls.LOGIN }} />;
   }
 
-  return (<Route
-    {...rest}
-    render={props => (
-      <AppLayout name={name} menuItems={menuItems}>
-        <Component {...props} />
-      </AppLayout>
-    )}
-  />)
+  return (
+    <Route
+      {...rest}
+      render={props => (
+        <AppLayout name={name} menuItems={menuItems}>
+          <Component {...props} />
+        </AppLayout>
+      )}
+    />
+  )
 }
 
 export default AppRoute;

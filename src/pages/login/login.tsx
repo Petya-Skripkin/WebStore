@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router';
+import { Redirect, withRouter } from 'react-router';
 
 import { Button } from 'components/.'
 import authHelpers from 'helpers/auth';
@@ -20,12 +20,13 @@ const Login = ({ history }) => {
       if(!res) {
         authHelpers.signout();
       }
-      setLoad(false);
+
       setIsAuthenticated(res);
+      setLoad(false);
     }
 
     auth();
-  }, [setLoad, setIsAuthenticated])
+  }, [])
 
   if (load) {
     return <span>Loading...</span>;
@@ -58,4 +59,4 @@ const Login = ({ history }) => {
   );
 };
 
-export default Login;
+export default withRouter(Login);
