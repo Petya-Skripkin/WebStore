@@ -4,13 +4,19 @@ import { BrowserRouter, Switch } from "react-router-dom";
 import { AppRoute, Footer } from 'components/.'
 import { urls } from 'constants/.';
 import { CUSTOMER_MENU } from './mock';
-import { Home } from './pages';
+import { Home, Product } from './pages';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Switch>
+          <AppRoute
+            name="Some name"
+            menuItems={CUSTOMER_MENU}
+            path={urls.PRODUCTS}
+            component={() => <Product />}
+          />
           <AppRoute
             name="Some name"
             menuItems={CUSTOMER_MENU}

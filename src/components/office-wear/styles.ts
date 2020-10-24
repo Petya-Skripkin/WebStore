@@ -9,8 +9,7 @@ export const Content = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 280px;
-  height: 420px;
+height: 300px;
   border-radius: 8px;
 `;
 

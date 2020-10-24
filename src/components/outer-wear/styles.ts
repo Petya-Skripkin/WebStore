@@ -21,7 +21,7 @@ export const QButton = styled.button`
 `;
 
 export const Question = styled(Icon)`
-  height: 15px;
+  height: 30px;
   padding: 8px 7px;
   border-radius: 0px 8px;
   background: ${colors.lightgray};
@@ -37,6 +37,10 @@ export const Conteiner = styled.div`
   display: flex;
   flex-direction: column;
   color: ${colors.lightblack};
+`;
+
+export const Title = styled.p`
+  width: 70px;
 `;
 
 export const Delivery = styled.p`

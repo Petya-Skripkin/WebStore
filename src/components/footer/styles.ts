@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { colors } from "../../constants";
 
 export const Content = styled.div`
+  position: fixed;
+  bottom: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   padding: 32px 0;
   color: ${colors.lightblack};
+  background-color: white;
 `;
 
 export const Logo = styled.img`
