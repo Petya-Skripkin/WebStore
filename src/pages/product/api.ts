@@ -3,15 +3,15 @@ import axios from "axios";
 import authHelpers from "helpers/auth";
 import { API_URL } from "constants/api";
 
-export const loadCategories = async () => {
-  const { data } = await axios.get(`${API_URL}products/categories`,
+export const loadProducts = async (categoryId) => {
+  const { data }= await axios.get(`${API_URL}products/?category=${categoryId}`,
     {
       headers: {
       'Authorization': 'Bearer ' + authHelpers.getAccessToken()
     }
   });
 
-  console.log("Categories: ", data);
+  console.log("Products: ", data);
   return data;
   
 };

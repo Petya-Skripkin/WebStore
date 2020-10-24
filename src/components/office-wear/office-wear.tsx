@@ -2,25 +2,20 @@ import React from 'react';
 
 import { Content, Image, Title, Conteiner, Text } from './styles';
 
-interface IMenu {
-  title: string;
-  description: string;
-}
-
 interface IProps {
   picture: string;
   name: string;
-  hint: IMenu;
+  description: string;
+  onClick: () => void;
 }
 
-const OfficeWear = ({ picture, name, hint }: IProps) => {
+const OfficeWear = ({ picture, name, description, onClick }: IProps) => {
   return (
-    <Content>
+    <Content onClick={onClick}>
       <Image src={picture} alt="" />
       <Title>{name}</Title>
       <Conteiner>
-        <Text>{hint.title}</Text>
-        <Text>{hint.description}</Text>
+        <Text>{description}</Text>
       </Conteiner>
     </Content>
   )
