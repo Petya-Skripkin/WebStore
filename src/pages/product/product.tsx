@@ -6,14 +6,16 @@ import { IMG_URL } from 'constants/api';
 
 import { TitleLink, Conteiner, Content } from './styles';
 
-const Product = () => {
+const Product = ({ match }) => {
   const [products, setProducts] = React.useState([]);
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = React.useState("");
+  const categoryId = match.params.categoryId;
 
   React.useEffect(() => {
     const load = async () => {
-      const products = await loadProducts();
+      const products = await loadProducts(categoryId);
       setProducts(products);
+      setCount(products[0].name);
     };
 
     load();
@@ -21,23 +23,22 @@ const Product = () => {
 
   return (
     <>
-      <TitleLink>Верхняя одежда</TitleLink>
+      <TitleLink>{count}</TitleLink>
       <Conteiner>
-        {products.map(product => (
-          <Content>
-            <OuterWear
-              key={product.uuid}
-              picture={IMG_URL + product.picture}
-              name={product.name}
-              duration={product.duration}
-              price={product.price}
-              count={count}
-              onPlus={() => setCount(count + 1)}
-              onMinus={() => setCount(count > 0 ? count - 1 : count)}
-              onOpenModalWindow={() => 2}
-            />
-          </Content>
-        ))}
+        {products.map(product => {
+          return (
+            <Content>
+              <OuterWear
+                key={product.uuid}
+                picture={IMG_URL + product.picture}
+                name={product.name}
+                duration={product.duration}
+                price={product.price}
+                onOpenModalWindow={() => 2}
+              />
+            </Content>
+          )
+        })}
       </Conteiner>
     </>
   )

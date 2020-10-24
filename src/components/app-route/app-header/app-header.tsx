@@ -18,7 +18,7 @@ interface IHeader {
   menuItems: IMenu[];
 }
 
-const AppHeader = ({ menuItems }: IHeader) => {
+const AppHeader = ({ name, menuItems }: IHeader) => {
   const history = useHistory();
   const path = _get(history, "location.pathname", "/");
 
@@ -42,7 +42,7 @@ const AppHeader = ({ menuItems }: IHeader) => {
       <FlexContent>
       <Search onChange={() => 0} />
       <Button>
-        Войти
+        {name}
         <Login iconName="login" />
       </Button>
       </FlexContent>

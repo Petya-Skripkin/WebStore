@@ -14,14 +14,14 @@ const App = () => {
           <AppRoute
             name="Some name"
             menuItems={CUSTOMER_MENU}
-            path={urls.PRODUCTS}
-            component={() => <Product />}
+            path={`${urls.CATEGORIES}/:categoryId`}
+            component={Product}
           />
           <AppRoute
             name="Some name"
             menuItems={CUSTOMER_MENU}
             path={urls.HOME}
-            component={() => <Home />}
+            component={Home}
           />
         </Switch>
       </BrowserRouter>

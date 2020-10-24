@@ -6,11 +6,12 @@ interface IProps {
   picture: string;
   name: string;
   description: string;
+  onClick: () => void;
 }
 
-const OfficeWear = ({ picture, name, description }: IProps) => {
+const OfficeWear = ({ picture, name, description, onClick }: IProps) => {
   return (
-    <Content>
+    <Content onClick={onClick}>
       <Image src={picture} alt="" />
       <Title>{name}</Title>
       <Conteiner>

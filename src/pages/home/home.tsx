@@ -7,7 +7,7 @@ import { urls } from 'constants/.'
 
 import { TitleLink, Conteiner, CategoriesMenu } from './styles';
 
-const Home = () => {
+const Home = ({ history }) => {
   const [categories, setCategories] = React.useState([]);
 
   React.useEffect(() => {
@@ -25,16 +25,16 @@ const Home = () => {
       <TitleLink>Главная</TitleLink>
       <Conteiner>
         {categories.map(category => (
-          <CategoriesMenu to={urls.PRODUCTS}>
+          <CategoriesMenu>
             <OfficeWear
               key={category.uuid.toString()}
               picture={IMG_URL + category.picture}
               name={category.name}
               description={category.description}
+              onClick={() => history.push(`${urls.CATEGORIES}/${category.uuid}`)}
             />
           </CategoriesMenu>
         ))}
-        {/* {categories.map(category => <Category key={category.uuid} {...category} />)} */}
       </Conteiner>
     </>
   )
