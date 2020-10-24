@@ -11,7 +11,7 @@ const SearchDemo = () => {
   )
 }
 
-storiesOf("Components/Search", module).add(
+storiesOf("Components/Inputs", module).add(
   "Search",
   () => (
     <div>

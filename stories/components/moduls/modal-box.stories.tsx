@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react";
 
 import ModalBox from "../../../src/components/modal-box";
 
-storiesOf("Components/ModalBoxs", module).add(
+storiesOf("Components/Modals", module).add(
   "ModalBox",
   () => (
     <div>

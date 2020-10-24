@@ -29,7 +29,7 @@ const OfficeWearDemo = () => {
   )
 }
 
-storiesOf("Components/OfficeWear", module).add(
+storiesOf("Components/dataDisplay", module).add(
   "OfficeWear",
   () => (
     <div>

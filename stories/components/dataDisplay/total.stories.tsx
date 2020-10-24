@@ -15,7 +15,7 @@ const TotalDemo = () => {
   )
 }
 
-storiesOf("Components/Total", module).add(
+storiesOf("Components/dataDisplay", module).add(
   "Total",
   () => (
     <div>

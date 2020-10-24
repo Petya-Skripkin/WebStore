@@ -28,7 +28,7 @@ const FooterDemo = () => {
   )
 }
 
-storiesOf("Components/Footer", module).add(
+storiesOf("Components/layout", module).add(
   "Footer",
   () => (
     <div>
